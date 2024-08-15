@@ -1,0 +1,1626 @@
+/*
+Theme Name: BootFrame Core
+Theme URI: //netbiel.pl/bootframe-core/info/
+Author: Peter Bielecki
+Author URI: //netbiel.pl
+Description: BootFrame Core is multipurpose WordPress theme with a clean responsive design  based on Bootstrap framework. BootFrame Core has a professional look that suits corporate business, blogs and portfolio websites. With deep WooCommerce plugin integration, BootFrame Core makes it easy to create eCommerce website. BootFrame is highly customizable with unlimited color and font options, logo upload, social media icons and much more that can be adjusted via Costomizer. You can easy build for your business site, portfolio, blog, one page, restaurant , healthcare, construction, education, sports, online agency,  services or any other site. BootFrame supports Site Origin's Page Builder which allows you to build any page layout required. It's also integrated with popular plugins: Contact Form 7, WPML, Polylang, Shortcodes Ultimate, WooCommerce. Tested with Gutenberg and WordPress 5.0
+Version: 4.0.3
+License:
+License URI:
+Tags:  one-column, two-columns, custom-background, custom-colors,  custom-menu, featured-image-header, featured-images, theme-options, full-width-template, sticky-post, flexible-header,  threaded-comments, translation-ready
+Text Domain: bootframe-core
+*/
+
+
+@import "assets/css/vendor.css";
+
+@import "assets/css/main.css";
+
+@font-face {
+    font-family: 'ananda_neptouch_2regular';
+    src: url('assets/fonts/ananda_neptouch_2-webfont.woff2') format('woff2'),
+         url('assets/fonts/ananda_neptouch_2-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+body.page-template-default , body.search-no-results , body.search{ background:#FFF; }
+body.home{ background:#FFF; }
+.smartlib-services-section {background: #ffe8c5; padding: 20px 0 10px;}
+.btn.smartlib-search-close-form.smartlib-btn-close {
+  display: none;
+}
+.smartlib-navbar-search-form {height: 40px; width: 337px; color:#000 !important; margin:30px 0px 0 0; border:1px solid #ffd443; background:#ffd443; border-radius: 25px; padding-left:10px}
+.smartlib-navbar-search-form input.form-control { background: transparent none repeat scroll 0 0; border: 0 none;}
+.smartlib-navbar-search-form .btn.btn-default.btn-sm.smartlib-search-btn.pull-right { background: transparent none repeat scroll 0 0;
+  border: 0 none; color: #fff; font-size: 19px; margin: -7px 15px 0 0; padding: 0;}
+.smartlib-navbar-search-form .btn-default:hover::after {background:transparent;width: 100%;}
+.smartlib-navbar-search-form .smartlib-search-btn .fa.fa-search:hover {color: #000;}
+.smartlib-main-slider .slides li h1 { display: none; font-weight: 600; margin-bottom: 15px;}
+.smartlib-main-slider-description.text-center { display: none;}
+.donation { background: #ce0b07 none repeat scroll 0 0; padding: 0 0; margin-bottom:30px; text-align:center;}
+.donation span { color: #feb156; font-size: 16px; text-transform: uppercase;}
+.donation ul{ list-style-type:none; padding:0; margin:0;}
+.donation ul li{ display:inline-block; margin-right:34px;}
+.donation ul li:last-child {margin: 0;}
+.donation ul li a {   margin-top: 15px;  display: inline-block; float: left;  font-weight: 600;} 
+.donation ul li a span:hover{ text-decoration:none; color:#ffd443;}
+.donation ul li img {float: left;margin-right: 5px;}
+.smartlib-latest-posts-section h2 { font:700 26px/40px "Poppins", "Arial",sans-serif; color:#ce0b07; margin:0 0 15px 0;}
+.smartlib-latest-posts-section p { font-family: arial; font-size: 14px; margin-bottom: 0;}
+.home .smartlib-latest-posts-section p {font-family: "Poppins", "Arial",sans-serif; font-size: 16px; margin-bottom: 12px; text-align: justify; line-height: 22px;}
+.smartlib-about-us-section {background: #ca0f00; padding:50px 0 30px;}
+.smartlib-about-us-section h2.sjs-heading{ font:400 72px/75px "ananda_neptouch_2regular",Helvetica,Arial,sans-serif; color: #fff; margin:0 0 17px;}
+.smartlib-about-us-section ul.left-list{ text-align:right; margin:143px 0 0 0; padding:0; list-style-type:none;}
+.smartlib-about-us-section ul.left-list li{ font:400 30px/35px "ananda_neptouch_2regular",Helvetica,Arial,sans-serif; color: #fff; margin:0 0 17px;}
+.smartlib-about-us-section ul.left-list li a{color: #fff;}
+.smartlib-about-us-section ul.left-list li a:hover{color: #ffd443;}
+.smartlib-about-us-section ul.left-list li:first-child{ margin-right:-12px;}
+.smartlib-about-us-section ul.left-list li:nth-child(2){ margin-right:10px;}
+.smartlib-about-us-section ul.left-list li:nth-child(3){ margin-right:30px;}
+.smartlib-about-us-section ul.left-list li:nth-child(4){ margin-right:10px;}
+.smartlib-about-us-section ul.left-list li:nth-child(5){ margin-right:-15px;}
+
+.smartlib-about-us-section ul.right-list{text-align:left; margin:143px 0 0 0; padding:0; list-style-type:none;}
+.smartlib-about-us-section ul.right-list li{ font:400 30px/35px "ananda_neptouch_2regular",Helvetica,Arial,sans-serif; color: #fff; margin:0 0 15px;}
+.smartlib-about-us-section ul.right-list li a{color: #fff;}
+.smartlib-about-us-section ul.right-list li a:hover{color: #ffd443;}
+.smartlib-about-us-section ul.right-list li:first-child{ margin-left:-12px;}
+.smartlib-about-us-section ul.right-list li:nth-child(2){ margin-left:10px;}
+.smartlib-about-us-section ul.right-list li:nth-child(3){ margin-left:30px;}
+.smartlib-about-us-section ul.right-list li:nth-child(4){ margin-left:10px;}
+.smartlib-about-us-section ul.right-list li:nth-child(5){ margin-left:-15px;}
+.lastst_inner { margin-bottom:5px; }
+.home  .lastst_inner{text-align: center;}
+.lastst_inner ul{ list-style-type:none; padding:0 0 0 8px; height:300px;}
+.lastst_inner ul li { background: rgba(0, 0, 0, 0) url("../../../wp-content/uploads/2019/01/nilachakra.png") no-repeat scroll 0px 0px; font:400 20px/40px "Poppins",Helvetica,Arial,sans-serif; color: #000;     padding:1px 0 40px 35px; margin-bottom:20px;}
+.lastst_inner ul li span.event_name {width: 80%;display: block;float: left; font-weight:600;}
+.lastst_inner ul li span.time {width: 20%;display: block;float: left; color:#ce0b07;}
+.latestBlock { margin:0;}
+.smartlib-latest-posts-section .lastst_inner > h3{
+	background: #ffd443 url("../../../wp-content/uploads/2018/12/icon-01.png") no-repeat scroll 0 0;font: 700 21px/58px "Poppins", "Arial",sans-serif;
+	padding:0 30px 0 65px; margin: 0 0 20px; color: #ec0500; text-transform: inherit; text-shadow: 1px 1px #333; display:inline-block; width:auto; border-radius: 50px;}
+.lastst_inner > h3 , .lastst_inner a h3 { background: rgba(0, 0, 0, 0) url("../../../wp-content/uploads/2018/12/icon-01.png") no-repeat scroll 0 0; font:700 30px/58px "Poppins", "Arial",sans-serif; padding: 0 0 0 65px; margin:0 0 10px; color:#d63c00;}
+.smartlib-page-container p { font:400 16px/25px "Poppins",Helvetica,Arial,sans-serif; color: #000; text-align:justify;}
+.more {
+  margin: 25px 0 0;
+}
+.more > a { background: #e5262e none repeat scroll 0 0;  border: 2px solid #ff8600; border-radius: 25px;  box-shadow: 0 0 4px -1px #333;  color: #fff; display: block;  font-size: 18px;
+  line-height: 32px; padding: 5px 15px;  text-align: center; width: 140px;}
+.more > a:hover{ background: #ff8600 none repeat scroll 0 0; border: 2px solid #e5262e; text-decoration:none;}
+.imgbox img {width: 100%;}
+#top-links {padding: 6px 0;margin: 0px auto;	width: 1000px;	height: 16px;	position: relative;padding-top: 8px;}
+#top-links ul {	margin: 0 auto; width:100%; text-align:center;	padding: 0;list-style: none;list-style: none;}
+#top-links ul li {
+	padding: 0;
+	margin: 0;
+	display: inline;
+	color: #CCC;
+	font-size: 12px;
+	float: left;
+	display:inline-block;
+	line-height: 14px;
+	padding: 0 10px;
+	border-right: 1px solid #CFC8C8;  font-family:Arial, Helvetica, sans-serif;
+}
+#top-links ul li a {
+	line-height: 14px;
+	font-size: 12px;
+	text-align: center;
+	text-decoration: none;
+	color: #fff;
+	font-weight: 400;
+	outline: none;
+        text-indent: -10000px;
+}
+#home-icon {
+	background: url(images/home-icon.gif) no-repeat left top;
+	width: 11px;
+	height: 12px;
+	text-indent: -99999999px;
+	display: block;
+}
+.smartlib-footer-area p{ font-family:Arial, Helvetica, sans-serif; color:#000; font-weight:bold;}
+
+
+.smartlib-footer-area h3 {font:600 21px/40px "Poppins", "Arial",sans-serif; margin-bottom:18px;	color: #ff4800; margin: 0;}
+.smartlib-footer-area ul{ padding:0;}
+.smartlib-footer-area ul li{ font:500 15px/22px "Poppins", "Arial",sans-serif; color:#000; background: url(../../../wp-content/uploads/2018/12/footer-bulate.png) no-repeat 0 7px; list-style-type:none; padding:0 0 4px 20px;}
+ul.ft-social li {list-style-type: none;float: left;padding: 0 5px 0;background: transparent;}
+.approve {margin: 20px 0 0 0;}
+.copyright {background: #ac0003;padding: 10px 0;color: #FFF; text-align:center;}
+.copyright p{font:400 13px/20px Arial, Helvetica, sans-serif; color:#FFF !important; margin:0;}
+.copyright img {float: right;}
+.copyright .content.right-text{ float:right;}
+.copyright .content.right-text p a {color: #FFF;}
+.dropdown-menu {min-width:250px; padding:0px 0 0 0;}
+/*.dropdown-menu::after {background: url(../../../wp-content/uploads/2018/12/menu-bottom-bg.png) no-repeat 0 100%; height:8px; content: ""; padding:0; width:282px; display:block;}*/
+.approve ul{ list-style-type:none;}
+.approve ul li{background: transparent; float:left; margin-right:0; list-style-type:none; padding:0;}
+li#menu-item-710 ul.dropdown-menu {left: 0 !important;}
+li#menu-item-710 ul.dropdown-menu li#menu-item-491 ul.dropdown-menu{left:98% !important;}
+li#menu-item-710 ul.dropdown-menu li#menu-item-490 ul.dropdown-menu{left:98% !important;}
+body.page-template-default .smartlib-left-content, .smartlib-right-content {width: 100%; padding:0;}
+.smartlib-left-content h3 { font:600 34px/40px "Poppins",Helvetica,Arial,sans-serif; color: #ff4800; margin-bottom: 24px;}
+.aigpl-breadcrumb-wrp {background: #c10e00;color: #FFF;margin: 0 0 10px 0;	border-radius: 4px;padding: 5px 10px;}
+.aigpl-breadcrumb {color: #FFA800;margin-right: 9px;}
+#aigpl-gallery-2 .aigpl-inr-wrp {border: 3px solid #cb0e00;padding: 2px;box-shadow: 1px 3px 9px #888888;border-radius: 0; min-height: 185px;}
+.gal-category {border: 1px solid #DDD;background: #f8f8f8;height: 100%;padding: 5px;}
+.gal-category h4{ background:#c70e00; color:#FFF; margin:0 0 10px 0; padding:0 0 0 10px;}
+.gal-category  ul{ padding:0; margin:0;}
+.gal-category  ul li{ font:600 14px/22px Arial, Helvetica, sans-serif; color:#000; background: url(../../../wp-content/uploads/2018/12/footer-bulate.png) no-repeat 0 7px; list-style-type:none; margin-bottom:5px; padding:0 0 4px 20px;}
+a.play {  background: rgba(0, 0, 0, 0) url("../../../wp-content/uploads/2018/12/voice-icone.png") no-repeat scroll 2px 3px;  display: block; float: left; height:20px; line-height: 35px; padding-left:0px; text-indent: -999px; width: 20px;}
+a.pause { background: rgba(0, 0, 0, 0) url("../../../wp-content/uploads/2018/12/voice-icone-pause.png") no-repeat scroll 2px 3px;display: block;
+  float: left; height:20px; line-height: 35px; text-indent: -999px; width: 22px;}
+#top-links ul li.last { border: medium none; margin-top: -10px;}
+.elementor-image {background: #FFF;	border: 2px solid #fff; margin-bottom:15px;	padding: 10px;box-shadow: 1px 3px 9px #888888;}
+.elementor-text-editor h4{font:600 24px/30px "Poppins",Helvetica,Arial,sans-serif; color: #ff4800;}
+
+.smartlib-search-btn .fa-search{ color:#b20400; margin-top:8px;}
+.smartlib-input-search-outer input {font-family: Poppins; color: #000; opacity: 0.9;}
+.header-logo-search-sec {position: relative;}
+.slogo.redlogo {position: relative;}
+.logo {margin:-26px 0 0px 0;position: absolute;left: 0;top: 0;}
+.logo1 {position: absolute;left: 120px;margin: -26px 0 0px 0;}
+.top-link{ margin:5px 0px 0 0; float:right;}
+.top-link ul{ text-align:center; padding: 0; margin:5px 0px 0 0;}
+.top-link ul li{ font: 400 13px/18px "Poppins",Helvetica,Arial,sans-serif;color: #fff; display:inline-block; border-right:1px solid #FFF; margin:0 6px 0 0; padding:0 11px 0 1px; float:left;}
+.top-link ul li:last-child{ border:0; padding:0; margin:0;}
+.top-link ul li a{color: #fff; text-decoration:none; text-transform:capitalize; font-weight:600; font-size:12px; }
+.top-link ul li a:hover{color: #fad443;}
+
+.smartlib-footer-area h3.blank_heading {
+    display: inline-block;
+    margin-top: 29px;
+}
+.botmslider a {margin: 12px 0 0 1px !important;}
+.donation span {   color: #FFF;  font-size: 16px; text-transform: uppercase; font-weight:500;}
+.indpromo img {  width: 100%;}
+#menu-item-30 .dropdown-menu {  left: auto; right: 0;}
+.smartlib-footer-area ul li a {
+    font-size: 13px; text-transform:inherit; color: #000; 
+}
+.smartlib-footer-area ul li a:hover {
+	color: #ff1800;
+}
+.smartlib-footer-area p { font:500 14px/22px "Poppins", "Arial",sans-serif !important; color: #000;text-decoration: none;}
+.btn-primary {	color: #000;background-color: #ffd744;border-color: transparent;}
+.btn-primary:hover{background-color: #000000;}
+.aigpl-inr-wrp {min-height: 430px;}
+.left-box ul {background: #f8f8f8;padding: 10px 5px 0 23px;min-height: 315px;text-align: left;border: 1px solid #DDD;box-shadow: 0px -1px 7px 0 #888888;}
+
+@media only screen and (max-width: 480px) and (min-width: 320px) {
+.smartlib-navigation-header {background: #dd0004 url(https://www.shreejagannatha.in/livecast-images/mible-headerbg-1.jpg) repeat-x 0 100%;
+	/*background: #dd0004 url(https://www.shreejagannatha.in/livecast-images/mible-headerbg-1.jpg) repeat-x -30px 100%;*/}
+
+	 .smartlib-navigation-header .smartlib-logo-header {max-width: 100%;}
+	 .smartlib-navbar-search-form{width: 290px; margin: 10px 0px 15px 0;}
+	 .smartlib-navigation-header .smartlib-default-top-navbar .smartlib-search-navigation-area{padding: 0 15px 0 0;}
+	 .smartlib-navigation-header .smartlib-main-navigation-wrapper .navbar-header {max-width: 100%;}
+	 .top-link {float: none; display:none;}
+	 button#responsive-menu-button {top: 14px !important;}
+	 #responsive-menu-container {width: 82% !important;}
+	 .pull-right {float: none !important; margin: 0 auto 15px;}
+	 .smartlib-navigation-header .smartlib-main-navigation-wrapper .navbar-header .navbar-toggle {margin-top: 10px; margin-right: 0;}
+	 .navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {background-color: #ce0b07;}
+	 .smartlib-body-has-topbar .smartlib-main-slider {padding-top:0px;}
+	 .botmslider {display: inline-block; width: 100%; margin-bottom: 5px;}
+	 .smartlib-latest-posts-section img {width: 100%;}
+	 .smartlib-latest-posts-section h2 {font: 600 18px/25px "Poppins", "Arial",sans-serif; text-align: center;}
+	 .more > a{display: inline-block;}
+	 .lastst_inner > h3 {font: 600 18px/30px "Poppins", "Arial",sans-serif;}
+	 .smartlib-latest-posts-section p {text-align: center; line-height: 23px;}
+	 .latestBlock {margin: 45px 0 0;}
+	 .imgbox img {width: 100%; margin-bottom: 15px;}
+	 .smartlib-footer-area h3.blank_heading{ display:none;}
+.slogo .logo {width: 23%;}
+.slogo .logo1 {width: 80%;left:71px;top: 27px;}
+.smartlib-navbar-search-form {width: 100%;margin: 10px 0 10px 0 !important;}
+.header-logo-search-sec {margin: 40px 0 0 0;}
+.smartlib-navigation-header .smartlib-main-navigation-wrapper .smartlib-default-top-navbar {position: absolute;}
+.smartlib-latest-posts-section .lastst_inner > h3 { background-position:0 3px; font: 500 15px/22px "Poppins", "Arial",sans-serif; height:62px; padding: 15px 10px 16px 60px; margin:0px; text-shadow: none;}	
+.smartlib-latest-posts-section .welcome p.solka {font: 500 16px/28px "Poppins",Helvetica,Arial,sans-serif; margin: 10px 0 10px 0;}
+.welcome .gajapatilogo img{ width:100%;}
+.welcome img {width: auto;}
+.containerbox .page-header {padding: 28px 0;}
+.containerbox { background-size: cover;}
+.page-template-default h2.parent_title {background: #ffd443; font-size:15px; line-height:20px !important; padding: 5px 5px 5px 5px !important; text-align:left;
+	border-radius: 6px; text-shadow: 0px 1px #333; margin: 10px 0 10px 0; background-image: inherit;}
+.page-template-default .elementor-heading-title.elementor-size-default {font-size: 15px !important;line-height: 22px !important;}	
+.nav-pills > li {border-radius: 0;width: 100%;margin: 0 !important;}	
+.is-search-form {padding: 0 0 6px 0 !important;float: none !important;width: 101% !important;margin: 0 auto;display: inline-block;}	
+.page-template-doantionoffering .gelryBox.gelryBox1 .img-holder {min-height: 207px !important;}
+h2.parent_title{ background: #ffd443;font: 700 15px/32px "Poppins", "Arial",sans-serif !important; padding: 0px 5px 0 5px !important; text-align:left;
+	border-radius: 6px !important; text-shadow: 0px 1px #333; margin: 10px 0 10px 0; background-image: inherit !important;}
+.is-form-style input.is-search-input {width:295px !important;}	
+.shreekBlock ul {float: none; width: 97% !important;background: #ffedaf;}
+.copyright img {margin: 10px 0 0 0;display: inline-block; text-align:center; float:none;}
+.donation ul {padding: 0 0 0 10px;}
+.donation ul li {margin-right: 0;margin-bottom: 5px;}
+#responsive-menu-container #responsive-menu li.responsive-menu-item a {text-transform: uppercase;}
+#responsive-menu-container #responsive-menu li.responsive-menu-item .responsive-menu-item-link {font-size: 14px !important;}
+#responsive-menu-container #responsive-menu ul.responsive-menu-submenu-depth-2 a.responsive-menu-item-link {font-size: 13px !important;}
+.smartlib-footer-area h3 {font: 600 18px/30px "Poppins", "Arial",sans-serif;}
+.copyright p {text-align: center !important;}
+.head-rituals {font: 600 20px/30px "Poppins",Helvetica,Arial,sans-serif !important;margin: 0 !important; color:#ce0b07 !important; text-shadow: inherit !important;}
+.online_Book {right: 0;top: 50px !important;left: 0 !important;width: 135px;}
+.page-id-1599 .elementor-section {position: relative;margin: 50px 0 0 0;}
+.page-id-519 .envira-gallery-item {width: 97% !important;height:125px !important;overflow: hidden !important;float: none !important;clear: both;
+min-height:125px;margin: 0 5px 5px 0 !important;}
+.demo h2 {font-size: 13px;}
+[class^="imghvr-"] figcaption h3 {margin-top: 0;}
+.lastst_inner ul li {font: 400 13px/20px "Poppins",Helvetica,Arial,sans-serif;color: #000;padding: 10px 0 40px 35px;margin-bottom: 10px;}
+.lastst_inner ul li span.event_name {font-weight: 400;}
+.page-id-3235 .lastst_inner tr th {font-size: 14px !important; width: 59% !important;}
+.modal {top: 10%;}
+.elementor-text-editor h4{ font-size:18px; line-height:24px;}
+.email-span {display: block;width: 100%;text-align: center;}
+.elementor-column-gap-default>.elementor-row>.elementor-column>.elementor-element-populated{ padding-top:0 !important;}
+.welcome {background: transparent !important;padding: 0 !important;}
+.welcome-footer p {font-size: 14px !important;}
+.welc-top {display: none;}
+.welc-bottom {display: none;}
+.welcome_inner {background: transparent !important; }
+.welcome_inner.cm-cont {min-height: 325px !important; padding: 10px 0 0 0 !important;}
+.welcome-pic {margin: 20px auto 10px !important;}
+
+	}
+@media (min-width: 600px) and (max-width: 767px) and (orientation: landscape) {
+.logo1 {position: absolute;left: 69px !important;margin: 0 0 0px 0;width: 37% !important;top: 37px !important;}
+.header-logo-search-sec .logo {display: block;width: 10%;margin-top: 47px;}
+.slogo .logo1 {width: 100%;left: 85px;top: 27px;}
+.is-search-form {padding: 57px 0 0 0 !important; width:100%; margin-right: 56px;}
+.header-logo-search-sec .col-md-7.col-sm-7.col-xs-12.text-right {position: inherit !important;float: none !important;}
+.smartlib-navigation-header {background: #dd0004 url(https://www.shreejagannatha.in/livecast-images/mobile-prot-bg.jpg) repeat-x 0 100%; /*background: #dd0004 url(https://www.shreejagannatha.in/livecast-images/mobile-prot-bg.jpg) repeat-x 0 100%;*/}
+button#responsive-menu-button, #responsive-menu-container {display: block !important;}
+button#responsive-menu-button {top: 56px !important;right: 18px !important;}
+#responsive-menu-container #responsive-menu li.responsive-menu-item .responsive-menu-item-link {font-size: 16px;}
+.smartlib-latest-posts-section .lastst_inner > h3 {background-position: 0 0px;font: 500 19px/30px "Poppins", "Arial",sans-serif;padding: 12px 0 16px 63px;margin: 0px;}
+.top-link {display: none;}
+#responsive-menu-container #responsive-menu li.responsive-menu-item a {text-transform: uppercase;}
+#responsive-menu-container #responsive-menu li.responsive-menu-item .responsive-menu-item-link {font-size: 16px !important;}
+h2.parent_title { font-size:20px !important; text-align:left;}
+.copyright p {text-align: center !important;}
+.copyright img {float: none; margin: 10px 0 0 0;}
+body.page-id-1392 .elementor-section-boxed.elementor-section-height-default.elementor-section.elementor-inner-section {min-height: 375px !important;width: 47%;
+	float: left;margin: 0 10px 10px;}
+.elementor-1392 .elementor-element .elementor-image {border: 0 !important;}
+.donation ul {text-align: center;}
+.smartlib-page-blocks .donation span {font-size: 16px;}
+.shreekBlock ul{ width:49% !important;}
+.head-rituals {font: 600 28px/34px "Poppins",Helvetica,Arial,sans-serif !important;margin: 0 !important; color:#ce0b07 !important; text-shadow: inherit !important;}
+.online_Book {top: 30px !important;}
+.email-span {display: block;width: 100%;text-align: center;}
+.welcome {background: transparent !important;padding: 0 !important;}
+.welcome-footer p {font-size: 14px !important;}
+.elementor-column-gap-default>.elementor-row>.elementor-column>.elementor-element-populated{ padding-top:0 !important;}
+.welcome {background: transparent !important;padding: 0 !important;}
+.welcome-footer p {font-size: 14px !important;}
+.welc-top {display: none;}
+.welc-bottom {display: none;}
+.welcome_inner {background: transparent !important; }
+.welcome_inner.cm-cont {min-height: 325px !important; padding: 10px 0 0 0 !important;}
+}
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+.header-logo-search-sec .logo {width: 30%;margin: 24px 0 0px 0;position: relative;}
+.slogo .logo1 {width: 100%;left: 85px;top: 27px;}
+.is-search-form {padding: 57px 0 0 0 !important; width:100%; margin-right: 56px;}
+.smartlib-navigation-header {background: #dd0004 url(../../../wp-content/uploads/2019/06/mobile-prot-bg.jpg) repeat-x 0 100%;}
+.donation ul li {display: inline-block;margin-right: 22px;width: 35%;}
+.donation ul li:nth-child(2) {width: 20%;}
+.smartlib-latest-posts-section .lastst_inner > h3 {background-position: 0 0px;font: 500 19px/34px "Poppins", "Arial",sans-serif;padding: 8px 0 16px 63px;margin: 0px;}
+button#responsive-menu-button, #responsive-menu-container {display: block !important;}
+button#responsive-menu-button {top: 85px !important;right: 18px !important;}
+#responsive-menu-container #responsive-menu li.responsive-menu-item .responsive-menu-item-link {font-size: 16px;}
+
+}
+
+.page-id-1861 .page-header.smartlib-page-title {display: block !important;}
+.img-holder img {
+	width: 100%;
+	border: 0px solid #ccc;
+}
+.gelryBox .entry-title {
+	font-weight: 600;
+	margin-top: 0px;
+	text-align: center;
+	padding: 10px 0;
+	margin-bottom: 0;
+	background: #ec0500;
+	text-decoration: none;
+	color: #FFF;
+	font: 500 21px/25px "Poppins",Helvetica,Arial,sans-serif;
+}
+.gelryBox .entry-title:hover{
+ text-decoration:none;
+}
+.gelryBox {
+	border: 5px solid #f00;
+	border-radius: 10px;
+	margin-bottom: 15px;
+}
+.gelryBox:hover {
+	background: none;
+}
+.left-box {
+	margin-bottom: 15px;
+}
+.bhesas {
+	margin-top: 30px;
+}
+span.ext {
+	background: url("../../../wp-content/themes/bootframe-core/images/extlink.png") right center no-repeat;
+	padding-right: 12px;
+        
+}
+.fHeightZoom1:hover .lImgZoom7_1 {
+	width: 100% !important;
+}
+.totalsoft-gv-lvg-area1 li{box-shadow:none !important; border: 2px solid #ffd443 !important; }
+
+.mc-container {
+  position: relative;
+
+
+
+  width: 100%;
+  margin-bottom:15px;
+}
+
+.mc-image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.mc-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(255, 232, 197, 0.7);
+  overflow: hidden;
+  width: 100%;
+  height: 0;
+  transition: .5s ease;
+
+}
+
+.mc-container:hover .mc-overlay {
+  height: 100%;
+}
+
+.mc-text {
+  color: #000;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 235px;
+}
+.mtb-30{ margin:30px auto;}
+.mbrpagtitle {
+	margin: 0 0 20px;
+	text-align: center;
+	font-size: 20px;
+	font-weight: 700;
+}
+.mc-text h3 {
+	font-size: 15px;
+	font-weight: bold;
+	margin-bottom: 0px;
+}
+.mc-text p {
+	font-size: 14px;
+}
+
+//Woo-commerce shopping cart
+.menu-item.menu-item-type-cart.menu-item-type-woocommerce-cart {
+	display: none;
+}
+.navbar-nav > li > .dropdown-menu > li > .dropdown-menu {
+ left:250px;
+}
+.cardbox {
+	display: inline-block;
+	width: 100%;
+	padding: 50px 0px;
+}
+.cardbox .gelryBox {
+	margin-bottom: 20px;
+}
+.containerbox img{ width:100%; height:auto;}
+.gelryBox p {
+	padding: 10px; font-size:16px; line-height:24px;
+	background: #f1f1f1;
+	color: #000;
+}
+.gelryBox  .beshacontent{ height: 160px; margin-bottom: 0;}
+.gelryBox .img-holder {
+	height: 227px;
+	background: #000;
+}
+.contentbox{margin-bottom: 15px; display: inline-block; width: 100%;}
+.contentbox img{ width:100%;}
+.specialritual #aigpl-gallery-1 {
+	width: 100%;
+}
+.specialritual .col-md-3 {
+	display: none;
+}
+
+.specialritual .aigpl-inr-wrp {
+	min-height: auto;
+}
+.aigpl-cnt-wrp.aigpl-col-3.aigpl-columns.aigpl-first {
+    display: none;
+}
+.gelryBox .festivalscontent{
+	height: 120px;
+}
+.gelryBox.gelryBox1 .img-holder {
+	height: auto;
+}
+.nearbybox p {
+	margin-bottom: 27px;
+	margin-top: 27px;
+}
+.nearbyboximg, .boximg {
+	border: 9px solid #FFF;
+	box-shadow: 0px 0px 10px #ccc;
+}
+.u-column1 h2, .u-column2 h2 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-size: 22px;
+    margin-bottom: 0px;
+}
+.u-column1 form, .u-column2 form {
+    margin-top: 10px !important;
+}
+.woocommerce form.login, .woocommerce-page form.login {
+    background: #ffdd9b;
+    border: 0px none;
+    border-radius: 10px;
+}
+.u-column1 button.woocommerce-Button.button, .u-column2 button.woocommerce-Button.button {
+    background: #ce0b07;
+    color: #FFF;
+    text-transform: uppercase;
+    border-radius: 5px;
+}
+.woocommerce form .form-row input.input-text, .woocommerce-page form .form-row input.input-text {
+    box-sizing: border-box;
+    width: 100%;
+    margin: 0;
+    outline: 0;
+    line-height: 1;
+    border-radius: 5px;
+    padding: 5px;
+    border: 1px solid #ccc;
+}
+.woocommerce form.register, .woocommerce-page form.register {
+    border: 1px solid #d3ced2;
+    padding: 20px;
+    margin: 2em 0;
+    text-align: left;
+    border-radius: 10px;
+    background: #ffdd9b;
+}
+.u-column2 p select {
+    height: 40px;
+    border-radius: 5px;
+    padding: 5px;
+    border: 1px solid #ccc;
+}
+.woocommerce-privacy-policy-text {
+    display: none;
+
+}
+.reachbox {
+	margin-top: 27px;
+}
+.reachbox span img {
+	border: 9px solid #FFF;
+	box-shadow: 0px 0px 10px #ccc;
+}
+.reachbox h2 {
+	font-size: 17px;
+	font-weight: bold;
+	text-align: left;
+	margin-bottom: 10px;
+}
+.mpr {
+	margin-top: 15px;
+}
+.pay_details {
+    margin-top: 10px;
+}
+.paynote {
+	display: inline-block;
+	width: 100%;
+	margin-top: 15px;
+margin-bottom: 15px;
+}
+#ehundi_regi_paynow {
+    background: #ce0b07;
+    color: #FFF;
+}
+#ehundi_regi_paynow:hover{background: #000000; }
+.contentbox p {
+	font-size: 16px;
+	line-height: 25px;
+	text-align: justify;
+}
+.conarea {
+	background: #fff5d1;
+	padding: 25px;
+	border: 10px solid #ffd443;
+}
+.containerbox {
+    background-position: top center;
+}
+.xyz {background: url("../../../wp-content/uploads/2019/06/new-footerbg.png") center bottom no-repeat; background-size: contain;
+	/*background: url("../../../wp-content/uploads/2019/02/footerbg.png") center bottom no-repeat;*/
+}
+.sp-image {
+    margin-top: 0px !important;
+}
+.slogo.blulogo {
+	display: none;
+}
+.slogo.blklogo{ display:none;}
+
+.scrollercontent{ padding-left:25px;}
+.extendheight{height:350px;}
+.raja-heading {text-align: center; margin:20px 0 0 0;}
+.home .raja-heading p {	text-align: center;margin: 0;}
+.home .raja-heading h2 {font-size: 16px; color: #cd003f; text-transform: capitalize; font-weight: 600; margin:0; line-height:26px;}
+.home .raja-heading h3 {
+	font-size: 12px;
+	color: #734b03;
+	text-transform: capitalize;
+	font-weight: 500;
+	margin: 0 0 15px;
+}
+.js-marquee {background: #f8f8f8 !important; margin: 10px; padding: 10px 0; border-radius: 4px; color: #cd003f ; }
+.ritualsection h2.headingbox, .ritualsection h2 {color: #cd003f;font-size: 26px;font-weight: 600;font-family: "Poppins",Helvetica,Arial,sans-serif;}
+.news-container {background: #fff2de;padding: 10px;border-radius: 4px;min-height: 380px;}
+.pagetitle-heading {background: rgba(0, 0, 0, 0) url("../../../wp-content/uploads/2018/12/icon-01.png") no-repeat scroll 0 0; font:700 30px/58px "Poppins", "Arial",sans-serif; padding: 0 0 0 65px; margin-bottom: 0; color:#d63c00; display:none;}
+
+h2.parent_title {background: #ffd443 url("../../../wp-content/uploads/2018/12/icon-01.png") no-repeat scroll 0 0;font: 700 30px/58px "Poppins", "Arial",sans-serif; padding: 0 30px 0 65px; margin-bottom: 20px; color: #ec0500; border-radius: 50px; text-shadow: 1px 1px #333; width: auto; display: inline-block;}
+h2.parent_title em{text-transform: capitalize;color: #161616;text-shadow: initial;font-weight: 600; font-style:normal;}
+h3.page_title {font: 600 24px/30px "Poppins", "Arial",sans-serif;padding: 0 0 10px 0;border-bottom: 1px dashed #DDD;color: #000;margin: 0 0 20px 0;}
+.retuals {background: #fff2de;padding: 10px;margin-bottom: 20px;min-height: 250px; box-shadow: 0 1px 12px rgba(0,0,0, .4);}
+
+.welc-top{ background: url("../../../wp-content/uploads/2019/07/wel-top-bg.jpg") repeat-x 0 0; position:relative;}
+.welc-top:before{background: url("../../../wp-content/uploads/2019/07/wel-left-top.jpg") no-repeat 0 0; padding:120px 0 0 0; display:block; width:100%; content:''; z-index:999; position:absolute; left:0; top:0;}
+.welc-top:after{background: url("../../../wp-content/uploads/2019/07/wel-right-top.jpg") no-repeat 100% 0; padding:120px 0 0 0; display:block; content:''; width:100%;  z-index:999; position:absolute; right:0; top:0;}
+
+.welc-bottom{ background: url("../../../wp-content/uploads/2019/07/wel-bottom-bg.jpg") repeat-x 0 100%; position:relative; margin-bottom:30px;}
+.welc-bottom:before{background: url("../../../wp-content/uploads/2019/07/wel-left-bottom.jpg") no-repeat 0 0; padding:120px 0 0 0; display:block; width:100%; content:''; z-index:999; position:absolute; left:0; bottom:-34px;}
+.welc-bottom:after{background: url("../../../wp-content/uploads/2019/07/wel-right-bottom.jpg") no-repeat 100% 0; padding:120px 0 0 0; display:block; content:''; width:100%;  z-index:999; position:absolute; right:0; bottom:-34px;}
+
+.welcome {margin: 0 0 20px 0;background: url("../../../wp-content/uploads/2019/07/wel-left-bg.jpg") repeat-Y 0 0;  /*background: url("../../../wp-content/uploads/2019/07/border.png") no-repeat scroll 0 0;*/ overflow: hidden; padding:0;}
+.welcome_inner{background: url("../../../wp-content/uploads/2019/07/wel-right-bg.jpg") repeat-Y 100% 0; padding:0 35px; min-height:930px;}
+.welcome > h3{ background: rgba(0, 0, 0, 0) url("../../../wp-content/uploads/2018/12/icon-01.png") no-repeat scroll 0 0; font:700 26px/58px "Poppins", "Arial",sans-serif; padding: 0 0 0 65px; margin:0 0 10px; text-transform: capitalize;}
+.welcome p { font:400 17px/26px "Poppins",Helvetica,Arial,sans-serif; color: #000;}
+
+.welcome p.solka {font: 300 20px/32px "Poppins",Helvetica,Arial,sans-serif;text-align: center;margin:50px 0 0px 0;font-style: italic;color: #FFA800; text-shadow: 1px 1px #000;}
+
+#theme-style .theme4 {
+	background: #FFF;
+	color: #000;
+	font-weight: bold;
+	border: 1px solid #000;
+	padding: 0 4px;
+	font-size: 10px;
+	margin-right: 5px;
+}
+#theme-style .theme4:hover {
+	background: #000;
+	color: #FFF;
+	font-weight: bold;
+	border: 1px solid #FFF;
+	padding: 0 4px;
+	font-size: 10px;
+}
+#theme-style .theme1 {
+	background: #000;
+	color: #ff920d;
+	font-weight: bold;
+	border: 1px solid #ff920d;
+	padding: 0 4px;
+	font-size: 10px;
+        margin-right:0px;
+}
+#theme-style .theme1:hover {
+	background: #ff920d;
+	color: #000;
+	font-weight: bold;
+	border: 1px solid #000;
+	padding: 0 4px;
+	font-size: 10px;
+}
+#theme-style .theme2 {
+	background: #000;
+	color: #00ff00;
+	font-weight: bold;
+	border: 1px solid #00ff00;
+	padding: 0 4px;
+	font-size: 10px;
+        margin-right: 5px;
+}
+#theme-style .theme2:hover {
+	background: #00ff00;
+	color: #000;
+	font-weight: bold;
+	border: 1px solid #000;
+	padding: 0 4px;
+	font-size: 10px;
+}
+#theme-style .theme3 {
+	background: #0000ff;
+	color: #fff;
+	font-weight: bold;
+	border: 1px solid #fff;
+	padding: 0 4px;
+	font-size: 10px;
+        margin-right: 5px;
+}
+#theme-style .theme3:hover {
+	background: #fff;
+	color: #0000ff;
+	font-weight: bold;
+	border: 1px solid #0000ff;
+	padding: 0 4px;
+	font-size: 10px;
+}
+
+.logo{ display:block;}
+.logo.blacklog{ display:none;}
+.logo.bluelogo{ display:none;}
+
+.pdficon {
+	text-align: center;
+	vertical-align: middle;
+}
+.pdficon .fa-file-pdf-o {
+	color: #F20303;
+	font-size: 32px;
+}
+.page-template-tender .smartlib-full-width-section .containerbox, .page-template-Notifications .smartlib-full-width-section .containerbox{ display:none;}
+
+.slick-list {
+	padding: 35px 0 !important;
+	background: url("../../../wp-content/uploads/2019/05/medieval-slider-bg.jpg") no-repeat; background-size:cover;}
+body.page-id-2138 .slick-list {background: url("../../../wp-content/uploads/2019/06/medieval-slider-bg2.jpg") no-repeat; background-size:cover; }
+body.page-id-2140 .slick-list {background: url("../../../wp-content/uploads/2019/06/modern-slider-bg.jpg") no-repeat; background-size:cover;}
+.wpsisac-slick-carousal .slick-image-slide {
+	margin: 0 15px !important;
+}
+.slick-dots {
+	display: none !important;
+}
+.wpsisac-slick-carousal.design-6 {
+	margin-bottom: 0px !important;
+}
+.wpsisac-slick-carousal.design-6 .slick-arrow {
+	display: none !important;
+}
+.wpsisac-slick-carousal.design-6 .slick-image-slide img {
+	display: inline-block !important;
+	width: 100% !important;
+	height: auto !important;
+}
+.page-id-2303 .slick-list{padding:20px 0 35px !important; background: url("../../../wp-content/uploads/2019/06/modern-slider-bg.jpg") no-repeat; background-size:cover;}
+
+.wpsisac-slick-carousal.design-6 .slick-image-slide img {
+	display: inline-block !important;
+	margin-top: 15px;
+}
+#post-2136 .elementor-heading-title.elementor-size-default {color: #d63c00;margin-bottom: 10px;font-size: 26px;}
+.elementor-heading-title.elementor-size-default {color: #d63c00 !important;font-size: 22px !important;margin-bottom: 10px !important; font-weight:500;}
+body.page-id-1392 .elementor-section-boxed.elementor-section-height-default.elementor-section.elementor-inner-section {border: 2px solid #c70b07;background: #f8f8f8; margin-bottom:20px; min-height:130px;}
+.elementor-1392 .elementor-element .elementor-image {background: #FFF;border: 0;padding: 0;box-shadow: inherit;border-right: 2px solid #d63c00;}
+.elementor-element.elementor-element-d8fae6b.elementor-widget.elementor-widget-image .elementor-widget-container .elementor-image {border: 0;}
+.smartlib-breadcrumb {display: none;}
+.shreekBlock {background: #ffd443;border-radius: 6px;padding: 10px; height:100%; overflow:hidden; padding-bottom:0; padding-right:0;}
+.shreekBlock ul {list-style-type: none;padding:5px 10px;float: left;margin: 0 5px 5px 0;width: 19.5%; background: #ffedaf; border-radius: 10px; -webkit-box-shadow: 3px 3px 29px -15px rgba(0,0,0,0.75);
+-moz-box-shadow: 3px 3px 29px -15px rgba(0,0,0,0.75);
+box-shadow: 3px 3px 29px -15px rgba(0,0,0,0.75); border:2px solid #ec0500; min-height: 408px;}
+.shreekBlock ul li{ font: 500 12px/26px "Poppins",Helvetica,Arial,sans-serif; color:#000; text-align:left;}
+.head-rituals{font: 500 36px/45px "Poppins",Helvetica,Arial,sans-serif; color:#ffd443; text-align:center; font-style:italic; text-shadow: 1px 1px #333;}
+.lastst_inner tbody tr {background: #FFA800;}
+.page-id-3235 .lastst_inner tr th {border: 1px solid #fff; font-size:20px;}
+.page-id-519 table {background: #FFF; border: 1px solid #ffd443;}
+.page-id-519 table th, .page-id-519 table td {border: 1px solid #ffd443;}
+.page-id-519 table#envirabox-title-float-wrap{background: transparent;} 
+.envira-gallery-item {border: 4px solid #ec0500 !important; padding: 5px !important; margin: 5px !important;float: left;width: 30% !important;}
+.formBlock {background: #fff0d8;overflow: hidden;padding: 10px 0;border: 1px solid #eec586;}
+.formBlock .form-control {border: 1px solid #e3b775;}
+.formBlock select.form-select {background: #fff;float: none;border: 1px solid #e3b775;height: 43px;width: 100%;margin-bottom: 10px;}
+.formBlock .form-group {margin-bottom: 10px;overflow: hidden;}
+.formBlock label{font-weight: 500;font-size: 16px;}
+.formBlock .submit {background: #d10f00;border-radius: 4px;padding: 10px 20px;width: 113px;text-transform: uppercase !important;line-height: 22px;
+height: 45px;font-size: 18px; float:right;}
+.formBlock input[type="submit"]:hover {background: #000;}
+.is-form-style input.is-search-input:focus {border: 0;box-shadow: inherit; outline: none;}
+.is-form-style button.is-search-submit:focus{border: 0;box-shadow: inherit; outline: none;}
+.formBlock h4 {margin-left: 17px;color: #ec0500;text-transform: uppercase;border-bottom: 1px dashed #333;padding-bottom: 10px;width: 96%;margin-bottom: 15px;}
+.container p {text-align: justify;font: 400 16px/25px "Poppins",Helvetica,Arial,sans-serif;}
+.is-search-form {padding: 29px 0 0 0;float: right; width:375px;}
+.copyright .content.left-text {padding: 20px 0 0 0;}
+.page-id-1423 h4 {color: #d63c00;font: 500 22px/25px "Poppins",Helvetica,Arial,sans-serif;text-transform: uppercase;}
+.page-id-1863 .smartlib-content-section.container {min-height: 450px;}
+.page-template-doantionoffering .smartlib-content-section.container {min-height: 500px;}
+.page-template-doantionoffering .gelryBox.gelryBox1 {min-height: 234px;}
+.page-template-doantionoffering .gelryBox.gelryBox1 .img-holder {min-height: 180px;height: 0;background: #FF0000;}
+.page-template-hundi .smartlib-navigation-header .smartlib-main-navigation-wrapper .smartlib-menu {padding: 24px 0 0 70px;}
+.page-id-3742 .xyz { padding: 120px 0 200px; text-align: center;}
+.main-msg {color: #fe4700; font-size: 34px;font-weight: 600;}
+.page-id-3742 .page-header.smartlib-page-title {display: none;}
+.inner-check {list-style-type: none;padding: 0;}
+.inner-check li { background: url("../../../wp-content/uploads/2019/06/inner-check.png") no-repeat 0 2px;
+	padding: 0 0 0 30px; color: #000;font: 500 17px/25px "Poppins",Helvetica,Arial,sans-serif; margin: 0 0 7px 0;}
+.paybutton{ margin:20px 0 0 0;}
+.paybutton a {background: #ce0b07;padding: 10px 20px;border-radius: 4px;color: #FFF;text-transform: uppercase;font-size: 17px;font-weight: 500;
+	display: block;width: 180px;text-align: center;}
+.paybutton a:hover{ background:#ffd443; color:#000;}
+.containerbox{ background-size:cover;}
+.online_Book {position: absolute;right: 0;top: 7px;}
+.online_Book a {display: block;background: #ac0003;color: #FFF;padding: 10px 15px;border-radius: 4px; font-weight:500;}
+.online_Book a:hover {background: #ffd443;color: #000;}
+.gajapatilogo {text-align: center;margin: 20px 0 20px;}
+.welcome-footer{ margin:117px 0 0 0; padding:0 0 26px 0;}
+.welcome-footer p {text-align: center !important;color: #2e5690; font-size: 14px !important;}
+.slokaBlock {height: 100%;overflow: hidden;margin: 0 0 35px 0;}
+.slokaBlock img {float: left;}
+.slokaBlock p.solka {margin: 50px 0 0 0;}
+.cm-leter {position: relative; text-align:center; margin:0 35px;}
+.cm-leter img{ width:100%;}
+.cm-photo {position: absolute;left: 110px; top: 25%; z-index: 9999;}
+.welcome_inner.cm-cont {padding: 62px 0 0 0; min-height:780px;}
+#theme-stylesize {display: none;}
+/*
+Theme Name: BootFrame Core
+Theme URI: //netbiel.pl/bootframe-core/info/
+Author: Peter Bielecki
+Author URI: //netbiel.pl
+Description: BootFrame Core is multipurpose WordPress theme with a clean responsive design  based on Bootstrap framework. BootFrame Core has a professional look that suits corporate business, blogs and portfolio websites. With deep WooCommerce plugin integration, BootFrame Core makes it easy to create eCommerce website. BootFrame is highly customizable with unlimited color and font options, logo upload, social media icons and much more that can be adjusted via Costomizer. You can easy build for your business site, portfolio, blog, one page, restaurant , healthcare, construction, education, sports, online agency,  services or any other site. BootFrame supports Site Origin's Page Builder which allows you to build any page layout required. It's also integrated with popular plugins: Contact Form 7, WPML, Polylang, Shortcodes Ultimate, WooCommerce. Tested with Gutenberg and WordPress 5.0
+Version: 4.0.3
+License:
+License URI:
+Tags:  one-column, two-columns, custom-background, custom-colors,  custom-menu, featured-image-header, featured-images, theme-options, full-width-template, sticky-post, flexible-header,  threaded-comments, translation-ready
+Text Domain: bootframe-core
+*/
+
+
+@import "assets/css/vendor.css";
+
+@import "assets/css/main.css";
+
+@font-face {
+    font-family: 'ananda_neptouch_2regular';
+    src: url('assets/fonts/ananda_neptouch_2-webfont.woff2') format('woff2'),
+         url('assets/fonts/ananda_neptouch_2-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+body.page-template-default , body.search-no-results , body.search{ background:#FFF; }
+body.home{ background:#FFF; }
+.smartlib-services-section {background: #ffe8c5; padding: 20px 0 10px;}
+.btn.smartlib-search-close-form.smartlib-btn-close {
+  display: none;
+}
+.smartlib-navbar-search-form {height: 40px; width: 337px; color:#000 !important; margin:30px 0px 0 0; border:1px solid #ffd443; background:#ffd443; border-radius: 25px; padding-left:10px}
+.smartlib-navbar-search-form input.form-control { background: transparent none repeat scroll 0 0; border: 0 none;}
+.smartlib-navbar-search-form .btn.btn-default.btn-sm.smartlib-search-btn.pull-right { background: transparent none repeat scroll 0 0;
+  border: 0 none; color: #fff; font-size: 19px; margin: -7px 15px 0 0; padding: 0;}
+.smartlib-navbar-search-form .btn-default:hover::after {background:transparent;width: 100%;}
+.smartlib-navbar-search-form .smartlib-search-btn .fa.fa-search:hover {color: #000;}
+.smartlib-main-slider .slides li h1 { display: none; font-weight: 600; margin-bottom: 15px;}
+.smartlib-main-slider-description.text-center { display: none;}
+.donation { background: #ce0b07 none repeat scroll 0 0; padding: 10px 0; margin-bottom:30px;}
+.donation span { color: #feb156; font-size: 16px; text-transform: uppercase;}
+.donation ul{ list-style-type:none; padding:0; margin:0;}
+.donation ul li {
+	display: inline-block;
+	margin-right: 10px;
+}
+.donation ul li:last-child {margin: 0;}
+.donation ul li a {   margin-top: 15px;  display: inline-block; float: left;  font-weight: 600;} 
+.donation ul li a span:hover{ text-decoration:none; color:#ffd443;}
+.donation ul li img {float: left;margin-right: 5px;}
+.smartlib-latest-posts-section h2 { font:700 26px/40px "Poppins", "Arial",sans-serif; color:#ce0b07; margin:0 0 15px 0;}
+.smartlib-latest-posts-section p { font-family: arial; font-size: 14px; margin-bottom: 0;}
+.home .smartlib-latest-posts-section p {font-family: "Poppins", "Arial",sans-serif; font-size: 16px; margin-bottom: 12px; text-align: justify; line-height: 22px;}
+.smartlib-about-us-section {background: #ca0f00; padding:50px 0 30px;}
+.smartlib-about-us-section h2.sjs-heading{ font:400 72px/75px "ananda_neptouch_2regular",Helvetica,Arial,sans-serif; color: #fff; margin:0 0 17px;}
+.smartlib-about-us-section ul.left-list{ text-align:right; margin:143px 0 0 0; padding:0; list-style-type:none;}
+.smartlib-about-us-section ul.left-list li{ font:400 30px/35px "ananda_neptouch_2regular",Helvetica,Arial,sans-serif; color: #fff; margin:0 0 17px;}
+.smartlib-about-us-section ul.left-list li a{color: #fff;}
+.smartlib-about-us-section ul.left-list li a:hover{color: #ffd443;}
+.smartlib-about-us-section ul.left-list li:first-child{ margin-right:-12px;}
+.smartlib-about-us-section ul.left-list li:nth-child(2){ margin-right:10px;}
+.smartlib-about-us-section ul.left-list li:nth-child(3){ margin-right:30px;}
+.smartlib-about-us-section ul.left-list li:nth-child(4){ margin-right:10px;}
+.smartlib-about-us-section ul.left-list li:nth-child(5){ margin-right:-15px;}
+
+.smartlib-about-us-section ul.right-list{text-align:left; margin:143px 0 0 0; padding:0; list-style-type:none;}
+.smartlib-about-us-section ul.right-list li{ font:400 30px/35px "ananda_neptouch_2regular",Helvetica,Arial,sans-serif; color: #fff; margin:0 0 15px;}
+.smartlib-about-us-section ul.right-list li a{color: #fff;}
+.smartlib-about-us-section ul.right-list li a:hover{color: #ffd443;}
+.smartlib-about-us-section ul.right-list li:first-child{ margin-left:-12px;}
+.smartlib-about-us-section ul.right-list li:nth-child(2){ margin-left:10px;}
+.smartlib-about-us-section ul.right-list li:nth-child(3){ margin-left:30px;}
+.smartlib-about-us-section ul.right-list li:nth-child(4){ margin-left:10px;}
+.smartlib-about-us-section ul.right-list li:nth-child(5){ margin-left:-15px;}
+.lastst_inner { margin-bottom:5px;}
+.lastst_inner ul{ list-style-type:none; padding:0 0 0 8px; height:300px;}
+.lastst_inner ul li { background: rgba(0, 0, 0, 0) url("../../../wp-content/uploads/2019/01/nilachakra.png") no-repeat scroll 0px 0px; font:400 20px/40px "Poppins",Helvetica,Arial,sans-serif; color: #000;     padding:1px 0 40px 35px; margin-bottom:20px;}
+.lastst_inner ul li span.event_name {width: 80%;display: block;float: left; font-weight:600;}
+.lastst_inner ul li span.time {width: 20%;display: block;float: left; color:#ce0b07;}
+.latestBlock { margin:0;}
+.smartlib-latest-posts-section .lastst_inner > h3{
+	background: #ffd443 url("../../../wp-content/uploads/2018/12/icon-01.png") no-repeat scroll 0 0;font: 700 2em/58px "Poppins", "Arial",sans-serif;
+	padding:0 30px 0 65px; margin: 0 0 20px; color: #ec0500; text-transform: inherit; text-shadow: 1px 1px #333; display:inline-block; width:auto; border-radius: 50px;}
+.lastst_inner > h3 , .lastst_inner a h3 { background: rgba(0, 0, 0, 0) url("../../../wp-content/uploads/2018/12/icon-01.png") no-repeat scroll 0 0; font:700 30px/58px "Poppins", "Arial",sans-serif; padding: 0 0 0 65px; margin:0 0 10px; color:#d63c00;}
+.smartlib-page-container p { font:400 16px/25px "Poppins",Helvetica,Arial,sans-serif; color: #000; text-align:justify;}
+.more {margin: 25px 0 0;}
+
+
+.banner-bottom-details .lastst_inner h3{
+	background: #ffd443 url("../../../wp-content/uploads/2018/12/icon-01.png") no-repeat scroll 0 0;font: 700 21px/58px "Poppins", "Arial",sans-serif;
+	padding:0 30px 0 65px; margin: 0 0 20px; color: #ec0500; text-transform: inherit; text-shadow: 1px 1px #333; display:inline-block; width:auto; border-radius: 50px;}
+.banner-bottom-details .lastst_inner a h3 { background: rgba(0, 0, 0, 0) url("../../../wp-content/uploads/2018/12/icon-01.png") no-repeat scroll 0 0; font:700 30px/58px "Poppins", "Arial",sans-serif; padding: 0 0 0 65px; margin:0 0 10px; color:#d63c00;}
+.more > a { background: #e5262e none repeat scroll 0 0;  border: 2px solid #ff8600; border-radius: 25px;  box-shadow: 0 0 4px -1px #333;  color: #fff; display: block;  font-size: 18px;
+  line-height: 32px; padding: 5px 15px;  text-align: center; width: 140px;}
+.more > a:hover{ background: #ff8600 none repeat scroll 0 0; border: 2px solid #e5262e; text-decoration:none;}
+.imgbox img {width: 100%;}
+#top-links {padding: 6px 0;margin: 0px auto;	width: 1000px;	height: 16px;	position: relative;padding-top: 8px;}
+#top-links ul {	margin: 0 auto; width:100%; text-align:center;	padding: 0;list-style: none;list-style: none;}
+#top-links ul li {
+	padding: 0;
+	margin: 0;
+	display: inline;
+	color: #CCC;
+	font-size: 12px;
+	float: left;
+	display:inline-block;
+	line-height: 14px;
+	padding: 0 10px;
+	border-right: 1px solid #CFC8C8;  font-family:Arial, Helvetica, sans-serif;
+}
+#top-links ul li a {
+	line-height: 14px;
+	font-size: 12px;
+	text-align: center;
+	text-decoration: none;
+	color: #fff;
+	font-weight: 400;
+	outline: none;
+        text-indent: -10000px;
+}
+#home-icon {
+	background: url(images/home-icon.gif) no-repeat left top;
+	width: 11px;
+	height: 12px;
+	text-indent: -99999999px;
+	display: block;
+}
+.smartlib-footer-area p{ font-family:Arial, Helvetica, sans-serif; color:#000; font-weight:bold;}
+
+
+.smartlib-footer-area h3 {font:600 21px/40px "Poppins", "Arial",sans-serif; margin-bottom:18px;	color: #ff4800; margin: 0;}
+.smartlib-footer-area ul{ padding:0;}
+.smartlib-footer-area ul li{ font:500 15px/22px "Poppins", "Arial",sans-serif; color:#000; background: url(../../../wp-content/uploads/2018/12/footer-bulate.png) no-repeat 0 7px; list-style-type:none; padding:0 0 4px 20px;}
+ul.ft-social li {list-style-type: none;float: left;padding: 0 5px 0;background: transparent;}
+.approve {margin: 20px 0 0 0;}
+.copyright {background: #ac0003;padding: 10px 0;color: #FFF; text-align:center;}
+.copyright p{font:400 13px/20px Arial, Helvetica, sans-serif; color:#FFF !important; margin:0;}
+.copyright img {float: right;}
+.copyright .content.right-text{ float:right;}
+.copyright .content.right-text p a {color: #FFF;}
+.dropdown-menu {min-width:250px; padding:0px 0 0 0;}
+/*.dropdown-menu::after {background: url(../../../wp-content/uploads/2018/12/menu-bottom-bg.png) no-repeat 0 100%; height:8px; content: ""; padding:0; width:282px; display:block;}*/
+.approve ul{ list-style-type:none;}
+.approve ul li{background: transparent; float:left; margin-right:0; list-style-type:none; padding:0;}
+li#menu-item-710 ul.dropdown-menu {left: 0 !important;}
+li#menu-item-710 ul.dropdown-menu li#menu-item-491 ul.dropdown-menu{left:98% !important;}
+li#menu-item-710 ul.dropdown-menu li#menu-item-490 ul.dropdown-menu{left:98% !important;}
+body.page-template-default .smartlib-left-content, .smartlib-right-content {width: 100%; padding:0;}
+.smartlib-left-content h3 { font:600 34px/40px "Poppins",Helvetica,Arial,sans-serif; color: #ff4800; margin-bottom: 24px;}
+.aigpl-breadcrumb-wrp {background: #c10e00;color: #FFF;margin: 0 0 10px 0;	border-radius: 4px;padding: 5px 10px;}
+.aigpl-breadcrumb {color: #FFA800;margin-right: 9px;}
+#aigpl-gallery-2 .aigpl-inr-wrp {border: 3px solid #cb0e00;padding: 2px;box-shadow: 1px 3px 9px #888888;border-radius: 0; min-height: 185px;}
+.gal-category {border: 1px solid #DDD;background: #f8f8f8;height: 100%;padding: 5px;}
+.gal-category h4{ background:#c70e00; color:#FFF; margin:0 0 10px 0; padding:0 0 0 10px;}
+.gal-category  ul{ padding:0; margin:0;}
+.gal-category  ul li{ font:600 14px/22px Arial, Helvetica, sans-serif; color:#000; background: url(../../../wp-content/uploads/2018/12/footer-bulate.png) no-repeat 0 7px; list-style-type:none; margin-bottom:5px; padding:0 0 4px 20px;}
+a.play {  background: rgba(0, 0, 0, 0) url("../../../wp-content/uploads/2018/12/voice-icone.png") no-repeat scroll 2px 3px;  display: block; float: left; height:20px; line-height: 35px; padding-left:0px; text-indent: -999px; width: 20px;}
+a.pause { background: rgba(0, 0, 0, 0) url("../../../wp-content/uploads/2018/12/voice-icone-pause.png") no-repeat scroll 2px 3px;display: block;
+  float: left; height:20px; line-height: 35px; text-indent: -999px; width: 22px;}
+#top-links ul li.last { border: medium none; margin-top: -10px;}
+.elementor-image {background: #FFF;	border: 2px solid #fff; margin-bottom:15px;	padding: 10px;box-shadow: 1px 3px 9px #888888;}
+.elementor-text-editor h4{font:600 24px/30px "Poppins",Helvetica,Arial,sans-serif; color: #ff4800;}
+
+.smartlib-search-btn .fa-search{ color:#b20400; margin-top:8px;}
+.smartlib-input-search-outer input {font-family: Poppins; color: #000; opacity: 0.9;}
+.header-logo-search-sec {position: relative;}
+.slogo.redlogo {position: relative;}
+.logo {margin:-26px 0 0px 0;position: absolute;left: 0;top: 0;}
+.logo1 {position: absolute;left: 120px;margin: -26px 0 0px 0;}
+.top-link{ margin:5px 0px 0 0; float:right;}
+.top-link ul{ text-align:center; padding: 0; margin:5px 0px 0 0;}
+.top-link ul li{ font: 400 13px/18px "Poppins",Helvetica,Arial,sans-serif;color: #fff; display:inline-block; border-right:1px solid #FFF; margin:0 6px 0 0; padding:0 11px 0 1px; float:left;}
+.top-link ul li:last-child{ border:0; padding:0; margin:0;}
+.top-link ul li a{color: #fff; text-decoration:none; text-transform:capitalize; font-weight:600; font-size:12px; }
+.top-link ul li a:hover{color: #fad443;}
+
+.smartlib-footer-area h3.blank_heading {
+    display: inline-block;
+
+    margin-top: 29px;
+}
+.botmslider a {margin: 12px 0 0 1px !important;}
+.donation span {   color: #FFF;  font-size: 16px; text-transform: uppercase; font-weight:500;}
+.indpromo img {  width: 100%;}
+#menu-item-30 .dropdown-menu {  left: auto; right: 0;}
+.smartlib-footer-area ul li a {
+    font-size: 13px; text-transform:inherit; color: #000; 
+}
+.smartlib-footer-area ul li a:hover {
+	color: #ff1800;
+}
+.smartlib-footer-area p { font:500 14px/22px "Poppins", "Arial",sans-serif !important; color: #000;text-decoration: none;}
+.btn-primary {	color: #000;background-color: #ffd744;border-color: transparent;}
+.btn-primary:hover{background-color: #000000;}
+.aigpl-inr-wrp {min-height: 430px;}
+.left-box ul {background: #f8f8f8;padding: 10px 5px 0 23px;min-height: 315px;text-align: left;border: 1px solid #DDD;box-shadow: 0px -1px 7px 0 #888888;}
+
+@media only screen and (max-width: 480px) and (min-width: 320px) {
+.smartlib-navigation-header {background: #dd0004 url(https://www.shreejagannatha.in/livecast-images/mible-headerbg-1.jpg) repeat-x 0 100%;
+	/*background: #dd0004 url(https://www.shreejagannatha.in/livecast-images/mible-headerbg-1.jpg) repeat-x -30px 100%;*/}
+
+	 .smartlib-navigation-header .smartlib-logo-header {max-width: 100%;}
+	 .smartlib-navbar-search-form{width: 290px; margin: 10px 0px 15px 0;}
+	 .smartlib-navigation-header .smartlib-default-top-navbar .smartlib-search-navigation-area{padding: 0 15px 0 0;}
+	 .smartlib-navigation-header .smartlib-main-navigation-wrapper .navbar-header {max-width: 100%;}
+	 .top-link {float: none; display:none;}
+	 button#responsive-menu-button {top: 14px !important;}
+	 #responsive-menu-container {width: 82% !important;}
+	 .pull-right {float: none !important; margin: 0 auto 15px;}
+	 .smartlib-navigation-header .smartlib-main-navigation-wrapper .navbar-header .navbar-toggle {margin-top: 10px; margin-right: 0;}
+	 .navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {background-color: #ce0b07;}
+	 .smartlib-body-has-topbar .smartlib-main-slider {padding-top:0px;}
+	 .botmslider {display: inline-block; width: 100%; margin-bottom: 5px;}
+	 .smartlib-latest-posts-section img {width: 100%;}
+	 .smartlib-latest-posts-section h2 {font: 600 18px/25px "Poppins", "Arial",sans-serif; text-align: center;}
+	 .more > a{display: inline-block;}
+	 .lastst_inner > h3 {font: 600 18px/30px "Poppins", "Arial",sans-serif;}
+	 .smartlib-latest-posts-section p {text-align: center; line-height: 23px;}
+	 .latestBlock {margin: 45px 0 0;}
+	 .imgbox img {width: 100%; margin-bottom: 15px;}
+	 .smartlib-footer-area h3.blank_heading{ display:none;}
+.slogo .logo {width: 23%;}
+.slogo .logo1 {width: 80%;left:71px;top: 27px;}
+.smartlib-navbar-search-form {width: 100%;margin: 10px 0 10px 0 !important;}
+.header-logo-search-sec {margin: 40px 0 0 0;}
+.smartlib-navigation-header .smartlib-main-navigation-wrapper .smartlib-default-top-navbar {position: absolute;}
+.smartlib-latest-posts-section .lastst_inner > h3 { background-position:0 3px; font: 500 15px/22px "Poppins", "Arial",sans-serif; height:62px; padding: 15px 10px 16px 60px; margin:0px; text-shadow: none;}	
+.smartlib-latest-posts-section .welcome p.solka {font: 500 16px/28px "Poppins",Helvetica,Arial,sans-serif; margin: 10px 0 10px 0;}
+.welcome .gajapatilogo img{ width:100%;}
+.welcome img {width: auto;}
+.containerbox .page-header {padding: 28px 0;}
+.containerbox { background-size: cover;}
+.page-template-default h2.parent_title {background: #ffd443; font-size:15px; line-height:20px !important; padding: 5px 5px 5px 5px !important; text-align:left;
+	border-radius: 6px; text-shadow: 0px 1px #333; margin: 10px 0 10px 0; background-image: inherit;}
+.page-template-default .elementor-heading-title.elementor-size-default {font-size: 15px !important;line-height: 22px !important;}	
+.nav-pills > li {border-radius: 0;width: 100%;margin: 0 !important;}	
+.is-search-form {padding: 0 0 6px 0 !important;float: none !important;width: 101% !important;margin: 0 auto;display: inline-block;}	
+.page-template-doantionoffering .gelryBox.gelryBox1 .img-holder {min-height: 207px !important;}
+h2.parent_title{ background: #ffd443;font: 700 15px/32px "Poppins", "Arial",sans-serif !important; padding: 0px 5px 0 5px !important; text-align:left;
+	border-radius: 6px !important; text-shadow: 0px 1px #333; margin: 10px 0 10px 0; background-image: inherit !important;}
+.is-form-style input.is-search-input {width:295px !important;}	
+.shreekBlock ul {float: none; width: 97% !important;background: #ffedaf;}
+.copyright img {margin: 10px 0 0 0;display: inline-block; text-align:center; float:none;}
+.donation ul {padding: 0 0 0 10px;}
+.donation ul li {margin-right: 0;margin-bottom: 5px;}
+#responsive-menu-container #responsive-menu li.responsive-menu-item a {text-transform: uppercase;}
+#responsive-menu-container #responsive-menu li.responsive-menu-item .responsive-menu-item-link {font-size: 14px !important;}
+#responsive-menu-container #responsive-menu ul.responsive-menu-submenu-depth-2 a.responsive-menu-item-link {font-size: 13px !important;}
+.smartlib-footer-area h3 {font: 600 18px/30px "Poppins", "Arial",sans-serif;}
+.copyright p {text-align: center !important;}
+.head-rituals {font: 600 20px/30px "Poppins",Helvetica,Arial,sans-serif !important;margin: 0 !important; color:#ce0b07 !important; text-shadow: inherit !important;}
+.online_Book {right: 0;top: 50px !important;left: 0 !important;width: 135px;}
+.page-id-1599 .elementor-section {position: relative;margin: 50px 0 0 0;}
+.page-id-519 .envira-gallery-item {width: 97% !important;height:125px !important;overflow: hidden !important;float: none !important;clear: both;
+min-height:125px;margin: 0 5px 5px 0 !important;}
+.demo h2 {font-size: 13px;}
+[class^="imghvr-"] figcaption h3 {margin-top: 0;}
+.lastst_inner ul li {font: 400 13px/20px "Poppins",Helvetica,Arial,sans-serif;color: #000;padding: 10px 0 40px 35px;margin-bottom: 10px;}
+.lastst_inner ul li span.event_name {font-weight: 400;}
+.page-id-3235 .lastst_inner tr th {font-size: 14px !important; width: 59% !important;}
+.modal {top: 10%;}
+.elementor-text-editor h4{ font-size:18px; line-height:24px;}
+.email-span {display: block;width: 100%;text-align: center;}
+.elementor-column-gap-default>.elementor-row>.elementor-column>.elementor-element-populated{ padding-top:0 !important;}
+.welcome {background: transparent !important;padding: 0 !important;}
+.welcome-footer p {font-size: 14px !important;}
+.welc-top {display: none;}
+.welc-bottom {display: none;}
+.welcome_inner {background: transparent !important; }
+.welcome_inner.cm-cont {min-height: 325px !important; padding: 10px 0 0 0 !important;}
+
+	}
+@media (min-width: 600px) and (max-width: 767px) and (orientation: landscape) {
+.logo1 {position: absolute;left: 69px !important;margin: 0 0 0px 0;width: 37% !important;top: 37px !important;}
+.header-logo-search-sec .logo {display: block;width: 10%;margin-top: 47px;}
+.slogo .logo1 {width: 100%;left: 85px;top: 27px;}
+.is-search-form {padding: 57px 0 0 0 !important; width:100%; margin-right: 56px;}
+.header-logo-search-sec .col-md-7.col-sm-7.col-xs-12.text-right {position: inherit !important;float: none !important;}
+.smartlib-navigation-header {background: #dd0004 url(https://www.shreejagannatha.in/livecast-images/mobile-prot-bg.jpg) repeat-x 0 100%; /*background: #dd0004 url(https://www.shreejagannatha.in/livecast-images/mobile-prot-bg.jpg) repeat-x 0 100%;*/}
+button#responsive-menu-button, #responsive-menu-container {display: block !important;}
+button#responsive-menu-button {top: 56px !important;right: 18px !important;}
+#responsive-menu-container #responsive-menu li.responsive-menu-item .responsive-menu-item-link {font-size: 16px;}
+.smartlib-latest-posts-section .lastst_inner > h3 {background-position: 0 0px;font: 500 19px/30px "Poppins", "Arial",sans-serif;padding: 12px 0 16px 63px;margin: 0px;}
+.top-link {display: none;}
+#responsive-menu-container #responsive-menu li.responsive-menu-item a {text-transform: uppercase;}
+
+
+
+#responsive-menu-container #responsive-menu li.responsive-menu-item .responsive-menu-item-link {font-size: 16px !important;}
+h2.parent_title { font-size:20px !important; text-align:left;}
+.copyright p {text-align: center !important;}
+.copyright img {float: none; margin: 10px 0 0 0;}
+body.page-id-1392 .elementor-section-boxed.elementor-section-height-default.elementor-section.elementor-inner-section {min-height: 375px !important;width: 47%;
+	float: left;margin: 0 10px 10px;}
+.elementor-1392 .elementor-element .elementor-image {border: 0 !important;}
+.donation ul {text-align: center;}
+.smartlib-page-blocks .donation span {font-size: 17px;}
+.shreekBlock ul{ width:49% !important;}
+.head-rituals {font: 600 28px/34px "Poppins",Helvetica,Arial,sans-serif !important;margin: 0 !important; color:#ce0b07 !important; text-shadow: inherit !important;}
+.online_Book {top: 30px !important;}
+.email-span {display: block;width: 100%;text-align: center;}
+.welcome {background: transparent !important;padding: 0 !important;}
+.welcome-footer p {font-size: 14px !important;}
+.elementor-column-gap-default>.elementor-row>.elementor-column>.elementor-element-populated{ padding-top:0 !important;}
+.welcome {background: transparent !important;padding: 0 !important;}
+.welcome-footer p {font-size: 14px !important;}
+.welc-top {display: none;}
+.welc-bottom {display: none;}
+.welcome_inner {background: transparent !important; }
+.welcome_inner.cm-cont {min-height: 325px !important; padding: 10px 0 0 0 !important;}
+}
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+.header-logo-search-sec .logo {width: 30%;margin: 24px 0 0px 0;position: relative;}
+.slogo .logo1 {width: 100%;left: 85px;top: 27px;}
+.is-search-form {padding: 57px 0 0 0 !important; width:100%; margin-right: 56px;}
+.smartlib-navigation-header {background: #dd0004 url(../../../wp-content/uploads/2019/06/mobile-prot-bg.jpg) repeat-x 0 100%;}
+.donation ul li {display: inline-block;margin-right: 22px;width: 35%;}
+.donation ul li:nth-child(2) {width: 20%;}
+.smartlib-latest-posts-section .lastst_inner > h3 {background-position: 0 0px;font: 500 19px/34px "Poppins", "Arial",sans-serif;padding: 8px 0 16px 63px;margin: 0px;}
+button#responsive-menu-button, #responsive-menu-container {display: block !important;}
+button#responsive-menu-button {top: 85px !important;right: 18px !important;}
+#responsive-menu-container #responsive-menu li.responsive-menu-item .responsive-menu-item-link {font-size: 16px;}
+
+}
+
+.page-id-1861 .page-header.smartlib-page-title {display: block !important;}
+.img-holder img {
+	width: 100%;
+	border: 0px solid #ccc;
+}
+.gelryBox .entry-title {
+	font-weight: 600;
+	margin-top: 0px;
+	text-align: center;
+	padding: 10px 0;
+	margin-bottom: 0;
+	background: #ec0500;
+	text-decoration: none;
+	color: #FFF;
+	font: 500 21px/25px "Poppins",Helvetica,Arial,sans-serif;
+}
+.gelryBox .entry-title:hover{
+ text-decoration:none;
+}
+.gelryBox {
+	border: 5px solid #f00;
+	border-radius: 10px;
+	margin-bottom: 15px;
+}
+.gelryBox:hover {
+	background: none;
+}
+.left-box {
+	margin-bottom: 15px;
+}
+.bhesas {
+	margin-top: 30px;
+}
+span.ext {
+	background: url("../../../wp-content/themes/bootframe-core/images/extlink.png") right center no-repeat;
+	padding-right: 12px;
+        
+}
+.fHeightZoom1:hover .lImgZoom7_1 {
+	width: 100% !important;
+}
+.totalsoft-gv-lvg-area1 li{box-shadow:none !important; border: 2px solid #ffd443 !important; }
+
+.mc-container {
+  position: relative;
+
+
+
+  width: 100%;
+  margin-bottom:15px;
+}
+
+.mc-image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.mc-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(255, 232, 197, 0.7);
+  overflow: hidden;
+  width: 100%;
+  height: 0;
+  transition: .5s ease;
+
+}
+
+.mc-container:hover .mc-overlay {
+  height: 100%;
+}
+
+.mc-text {
+  color: #000;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 235px;
+}
+.mtb-30{ margin:30px auto;}
+.mbrpagtitle {
+	margin: 0 0 20px;
+	text-align: center;
+	font-size: 20px;
+	font-weight: 700;
+}
+.mc-text h3 {
+	font-size: 15px;
+	font-weight: bold;
+	margin-bottom: 0px;
+}
+.mc-text p {
+	font-size: 14px;
+}
+
+//Woo-commerce shopping cart
+.menu-item.menu-item-type-cart.menu-item-type-woocommerce-cart {
+	display: none;
+}
+.navbar-nav > li > .dropdown-menu > li > .dropdown-menu {left:307px;}
+.cardbox {
+	display: inline-block;
+	width: 100%;
+	padding: 50px 0px;
+}
+.cardbox .gelryBox {
+	margin-bottom: 20px;
+}
+.containerbox img{ width:100%; height:auto;}
+.gelryBox p {
+	padding: 10px; font-size:16px; line-height:24px;
+	background: #f1f1f1;
+	color: #000;
+}
+.gelryBox  .beshacontent{ height: 160px; margin-bottom: 0;}
+.gelryBox .img-holder {
+	height: 227px;
+	background: #000;
+}
+.contentbox{margin-bottom: 15px; display: inline-block; width: 100%;}
+.contentbox img{ width:100%;}
+.specialritual #aigpl-gallery-1 {
+	width: 100%;
+}
+.specialritual .col-md-3 {
+	display: none;
+}
+
+.specialritual .aigpl-inr-wrp {
+	min-height: auto;
+}
+.aigpl-cnt-wrp.aigpl-col-3.aigpl-columns.aigpl-first {
+    display: none;
+}
+.gelryBox .festivalscontent{
+	height: 120px;
+}
+.gelryBox.gelryBox1 .img-holder {
+	height: auto;
+}
+.nearbybox p {
+	margin-bottom: 27px;
+	margin-top: 27px;
+}
+.nearbyboximg, .boximg {
+	border: 9px solid #FFF;
+	box-shadow: 0px 0px 10px #ccc;
+}
+.u-column1 h2, .u-column2 h2 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-size: 22px;
+    margin-bottom: 0px;
+}
+.u-column1 form, .u-column2 form {
+    margin-top: 10px !important;
+}
+.woocommerce form.login, .woocommerce-page form.login {
+    background: #ffdd9b;
+    border: 0px none;
+    border-radius: 10px;
+}
+.u-column1 button.woocommerce-Button.button, .u-column2 button.woocommerce-Button.button {
+    background: #ce0b07;
+    color: #FFF;
+    text-transform: uppercase;
+    border-radius: 5px;
+}
+.woocommerce form .form-row input.input-text, .woocommerce-page form .form-row input.input-text {
+    box-sizing: border-box;
+    width: 100%;
+    margin: 0;
+    outline: 0;
+    line-height: 1;
+    border-radius: 5px;
+    padding: 5px;
+    border: 1px solid #ccc;
+}
+.woocommerce form.register, .woocommerce-page form.register {
+    border: 1px solid #d3ced2;
+    padding: 20px;
+    margin: 2em 0;
+    text-align: left;
+    border-radius: 10px;
+    background: #ffdd9b;
+}
+.u-column2 p select {
+    height: 40px;
+    border-radius: 5px;
+    padding: 5px;
+    border: 1px solid #ccc;
+}
+.woocommerce-privacy-policy-text {
+    display: none;
+
+}
+.reachbox {
+	margin-top: 27px;
+}
+.reachbox span img {
+	border: 9px solid #FFF;
+	box-shadow: 0px 0px 10px #ccc;
+}
+.reachbox h2 {
+	font-size: 17px;
+	font-weight: bold;
+	text-align: left;
+	margin-bottom: 10px;
+}
+.mpr {
+	margin-top: 15px;
+}
+.pay_details {
+    margin-top: 10px;
+}
+.paynote {
+	display: inline-block;
+	width: 100%;
+	margin-top: 15px;
+margin-bottom: 15px;
+}
+#ehundi_regi_paynow {
+    background: #ce0b07;
+    color: #FFF;
+}
+#ehundi_regi_paynow:hover{background: #000000; }
+.contentbox p {
+	font-size: 16px;
+	line-height: 25px;
+	text-align: justify;
+}
+.conarea {
+	background: #fff5d1;
+	padding: 25px;
+	border: 10px solid #ffd443;
+}
+.containerbox {
+    background-position: top center;
+}
+.xyz {background: url("../../../wp-content/uploads/2019/06/new-footerbg.png") center bottom no-repeat; background-size: contain;
+	/*background: url("../../../wp-content/uploads/2019/02/footerbg.png") center bottom no-repeat;*/
+}
+.sp-image {
+    margin-top: 0px !important;
+}
+.slogo.blulogo {
+	display: none;
+}
+.slogo.blklogo{ display:none;}
+
+.scrollercontent{ padding-left:25px;}
+.extendheight{height:350px;}
+.raja-heading {text-align: center; margin:20px 0 0 0;}
+.home .raja-heading p {	text-align: center;margin: 0;}
+.home .raja-heading h2 {font-size: 16px; color: #cd003f; text-transform: capitalize; font-weight: 600; margin:0; line-height:26px;}
+.home .raja-heading h3 {
+	font-size: 12px;
+	color: #734b03;
+	text-transform: capitalize;
+	font-weight: 500;
+	margin: 0 0 15px;
+}
+.js-marquee {background: #f8f8f8 !important; margin: 10px; padding: 10px 0; border-radius: 4px; color: #cd003f ; }
+.ritualsection h2.headingbox, .ritualsection h2 {color: #cd003f;font-size: 26px;font-weight: 600;font-family: "Poppins",Helvetica,Arial,sans-serif;}
+.news-container {background: #fff2de;padding: 10px;border-radius: 4px;min-height: 380px;}
+.pagetitle-heading {background: rgba(0, 0, 0, 0) url("../../../wp-content/uploads/2018/12/icon-01.png") no-repeat scroll 0 0; font:700 30px/58px "Poppins", "Arial",sans-serif; padding: 0 0 0 65px; margin-bottom: 0; color:#d63c00; display:none;}
+
+h2.parent_title {background: #ffd443 url("../../../wp-content/uploads/2018/12/icon-01.png") no-repeat scroll 0 0;font: 700 28px/58px "Poppins", "Arial",sans-serif; padding: 0 30px 0 65px; margin-bottom: 20px; color: #ec0500; border-radius: 50px; text-shadow: 1px 1px #333; width: auto; display: inline-block;}
+h2.parent_title em{text-transform: capitalize;color: #161616;text-shadow: initial;font-weight: 600; font-style:normal;}
+h3.page_title {font: 600 24px/30px "Poppins", "Arial",sans-serif;padding: 0 0 10px 0;border-bottom: 1px dashed #DDD;color: #000;margin: 0 0 20px 0;}
+.retuals {background: #fff2de;padding: 10px;margin-bottom: 20px;min-height: 250px; box-shadow: 0 1px 12px rgba(0,0,0, .4);}
+
+.welc-top{ background: url("../../../wp-content/uploads/2019/07/wel-top-bg.jpg") repeat-x 0 0; position:relative;}
+.welc-top:before{background: url("../../../wp-content/uploads/2019/07/wel-left-top.jpg") no-repeat 0 0; padding:120px 0 0 0; display:block; width:100%; content:''; z-index:999; position:absolute; left:0; top:0;}
+.welc-top:after{background: url("../../../wp-content/uploads/2019/07/wel-right-top.jpg") no-repeat 100% 0; padding:120px 0 0 0; display:block; content:''; width:100%;  z-index:999; position:absolute; right:0; top:0;}
+
+.welc-bottom{ background: url("../../../wp-content/uploads/2019/07/wel-bottom-bg.jpg") repeat-x 0 100%; position:relative; margin-bottom:30px;}
+.welc-bottom:before{background: url("../../../wp-content/uploads/2019/07/wel-left-bottom.jpg") no-repeat 0 0; padding:120px 0 0 0; display:block; width:100%; content:''; z-index:999; position:absolute; left:0; bottom:-34px;}
+.welc-bottom:after{background: url("../../../wp-content/uploads/2019/07/wel-right-bottom.jpg") no-repeat 100% 0; padding:120px 0 0 0; display:block; content:''; width:100%;  z-index:999; position:absolute; right:0; bottom:-34px;}
+
+.welcome {margin: 0 0 20px 0;background: url("../../../wp-content/uploads/2019/07/wel-left-bg.jpg") repeat-Y 0 0;  /*background: url("../../../wp-content/uploads/2019/07/border.png") no-repeat scroll 0 0;*/ overflow: hidden; padding:0;}
+.welcome_inner{background: url("../../../wp-content/uploads/2019/07/wel-right-bg.jpg") repeat-Y 100% 0; padding:0 35px; min-height:930px;}
+.welcome > h3{ background: rgba(0, 0, 0, 0) url("../../../wp-content/uploads/2018/12/icon-01.png") no-repeat scroll 0 0; font:700 26px/58px "Poppins", "Arial",sans-serif; padding: 0 0 0 65px; margin:0 0 10px; text-transform: capitalize;}
+.welcome p { font:400 17px/26px "Poppins",Helvetica,Arial,sans-serif; color: #000;}
+
+.welcome p.solka {font: 300 20px/32px "Poppins",Helvetica,Arial,sans-serif;text-align: center;margin:50px 0 0px 0;font-style: italic;color: #FFA800; text-shadow: 1px 1px #000;}
+
+#theme-style .theme4 {
+	background: #FFF;
+	color: #000;
+	font-weight: bold;
+	border: 1px solid #000;
+	padding: 0 4px;
+	font-size: 10px;
+	margin-right: 5px;
+}
+#theme-style .theme4:hover {
+	background: #000;
+	color: #FFF;
+	font-weight: bold;
+	border: 1px solid #FFF;
+	padding: 0 4px;
+	font-size: 10px;
+}
+#theme-style .theme1 {
+	background: #000;
+	color: #ff920d;
+	font-weight: bold;
+	border: 1px solid #ff920d;
+	padding: 0 4px;
+	font-size: 10px;
+        margin-right:0px;
+}
+#theme-style .theme1:hover {
+	background: #ff920d;
+	color: #000;
+
+	font-weight: bold;
+	border: 1px solid #000;
+	padding: 0 4px;
+	font-size: 10px;
+}
+#theme-style .theme2 {
+	background: #000;
+	color: #00ff00;
+	font-weight: bold;
+	border: 1px solid #00ff00;
+	padding: 0 4px;
+	font-size: 10px;
+        margin-right: 5px;
+}
+#theme-style .theme2:hover {
+	background: #00ff00;
+	color: #000;
+	font-weight: bold;
+	border: 1px solid #000;
+	padding: 0 4px;
+	font-size: 10px;
+}
+#theme-style .theme3 {
+	background: #0000ff;
+	color: #fff;
+	font-weight: bold;
+	border: 1px solid #fff;
+	padding: 0 4px;
+	font-size: 10px;
+        margin-right: 5px;
+}
+#theme-style .theme3:hover {
+	background: #fff;
+	color: #0000ff;
+	font-weight: bold;
+	border: 1px solid #0000ff;
+	padding: 0 4px;
+	font-size: 10px;
+}
+
+.logo{ display:block;}
+.logo.blacklog{ display:none;}
+.logo.bluelogo{ display:none;}
+
+.pdficon {
+	text-align: center;
+	vertical-align: middle;
+}
+.pdficon .fa-file-pdf-o {
+	color: #F20303;
+	font-size: 32px;
+}
+.page-template-tender .smartlib-full-width-section .containerbox, .page-template-Notifications .smartlib-full-width-section .containerbox{ display:none;}
+
+.slick-list {
+	padding: 35px 0 !important;
+	background: url("../../../wp-content/uploads/2019/05/medieval-slider-bg.jpg") no-repeat; background-size:cover;}
+body.page-id-2138 .slick-list {background: url("../../../wp-content/uploads/2019/06/medieval-slider-bg2.jpg") no-repeat; background-size:cover; }
+body.page-id-2140 .slick-list {background: url("../../../wp-content/uploads/2019/06/modern-slider-bg.jpg") no-repeat; background-size:cover;}
+.wpsisac-slick-carousal .slick-image-slide {
+	margin: 0 15px !important;
+}
+.slick-dots {
+	display: none !important;
+}
+.wpsisac-slick-carousal.design-6 {
+	margin-bottom: 0px !important;
+}
+.wpsisac-slick-carousal.design-6 .slick-arrow {
+	display: none !important;
+}
+.wpsisac-slick-carousal.design-6 .slick-image-slide img {
+	display: inline-block !important;
+	width: 100% !important;
+	height: auto !important;
+}
+.page-id-2303 .slick-list{padding:20px 0 35px !important; background: url("../../../wp-content/uploads/2019/06/modern-slider-bg.jpg") no-repeat; background-size:cover;}
+
+.wpsisac-slick-carousal.design-6 .slick-image-slide img {
+	display: inline-block !important;
+	margin-top: 15px;
+}
+#post-2136 .elementor-heading-title.elementor-size-default {color: #d63c00;margin-bottom: 10px;font-size: 26px;}
+.elementor-heading-title.elementor-size-default {color: #d63c00 !important;font-size: 22px !important;margin-bottom: 10px !important; font-weight:500;}
+body.page-id-1392 .elementor-section-boxed.elementor-section-height-default.elementor-section.elementor-inner-section {border: 2px solid #c70b07;background: #f8f8f8; margin-bottom:20px; min-height:150px;}
+.elementor-1392 .elementor-element .elementor-image {background: #FFF;border: 0;padding: 0;box-shadow: inherit;border-right: 2px solid #d63c00;}
+.smartlib-breadcrumb {display: none;}
+.shreekBlock {background: #ffd443;border-radius: 6px;padding: 10px; height:100%; overflow:hidden; padding-bottom:0; padding-right:0;}
+.shreekBlock ul {list-style-type: none;padding:5px 10px;float: left;margin: 0 5px 5px 0;width: 19.5%; background: #ffedaf; border-radius: 10px; -webkit-box-shadow: 3px 3px 29px -15px rgba(0,0,0,0.75);
+-moz-box-shadow: 3px 3px 29px -15px rgba(0,0,0,0.75);
+box-shadow: 3px 3px 29px -15px rgba(0,0,0,0.75); border:2px solid #ec0500; min-height: 408px;}
+.shreekBlock ul li{ font: 500 12px/26px "Poppins",Helvetica,Arial,sans-serif; color:#000; text-align:left;}
+.head-rituals{font: 500 36px/45px "Poppins",Helvetica,Arial,sans-serif; color:#ffd443; text-align:center; font-style:italic; text-shadow: 1px 1px #333;}
+.lastst_inner tbody tr {background: #FFA800;}
+.page-id-3235 .lastst_inner tr th {border: 1px solid #fff; font-size:20px;}
+.page-id-519 table {background: #FFF; border: 1px solid #ffd443;}
+.page-id-519 table th, .page-id-519 table td {border: 1px solid #ffd443;}
+.page-id-519 table#envirabox-title-float-wrap{background: transparent;} 
+.envira-gallery-item {border: 4px solid #ec0500 !important; padding: 5px !important; margin: 5px !important;float: left;width: 30% !important;}
+
+
+
+.formBlock {background: #fff0d8;overflow: hidden;padding: 10px 0;border: 1px solid #eec586;}
+.formBlock .form-control {border: 1px solid #e3b775;}
+.formBlock select.form-select {background: #fff;float: none;border: 1px solid #e3b775;height: 43px;width: 100%;margin-bottom: 10px;}
+.formBlock .form-group {margin-bottom: 10px;overflow: hidden;}
+.formBlock label{font-weight: 500;font-size: 16px;}
+.formBlock .submit {background: #d10f00;border-radius: 4px;padding: 10px 20px;width: 113px;text-transform: uppercase !important;line-height: 22px;
+height: 45px;font-size: 18px; float:right;}
+.formBlock input[type="submit"]:hover {background: #000;}
+.is-form-style input.is-search-input:focus {border: 0;box-shadow: inherit; outline: none;}
+.is-form-style button.is-search-submit:focus{border: 0;box-shadow: inherit; outline: none;}
+.formBlock h4 {margin-left: 17px;color: #ec0500;text-transform: uppercase;border-bottom: 1px dashed #333;padding-bottom: 10px;width: 96%;margin-bottom: 15px;}
+.container p {text-align: justify;font: 400 16px/25px "Poppins",Helvetica,Arial,sans-serif;}
+.is-search-form {padding: 29px 0 0 0;float: right; width:375px;}
+.copyright .content.left-text {padding: 20px 0 0 0;}
+.page-id-1423 h4 {color: #d63c00;font: 500 22px/25px "Poppins",Helvetica,Arial,sans-serif;text-transform: uppercase;}
+.page-id-1863 .smartlib-content-section.container {min-height: 450px;}
+.page-template-doantionoffering .smartlib-content-section.container {min-height: 500px;}
+.page-template-doantionoffering .gelryBox.gelryBox1 {min-height: 234px;}
+.page-template-doantionoffering .gelryBox.gelryBox1 .img-holder {min-height: 180px;height: 0;background: #FF0000;}
+.page-template-hundi .smartlib-navigation-header .smartlib-main-navigation-wrapper .smartlib-menu {padding: 24px 0 0 70px;}
+.page-id-3742 .xyz { padding: 120px 0 200px; text-align: center;}
+.main-msg {color: #fe4700; font-size: 34px;font-weight: 600;}
+.page-id-3742 .page-header.smartlib-page-title {display: none;}
+.inner-check {list-style-type: none;padding: 0;}
+.inner-check li { background: url("../../../wp-content/uploads/2019/06/inner-check.png") no-repeat 0 2px;
+	padding: 0 0 0 30px; color: #000;font: 500 17px/25px "Poppins",Helvetica,Arial,sans-serif; margin: 0 0 7px 0;}
+.paybutton{ margin:20px 0 0 0;}
+.paybutton a {background: #ce0b07;padding: 10px 20px;border-radius: 4px;color: #FFF;text-transform: uppercase;font-size: 17px;font-weight: 500;
+	display: block;width: 180px;text-align: center;}
+.paybutton a:hover{ background:#ffd443; color:#000;}
+.containerbox{ background-size:cover;}
+.online_Book {position: absolute;right: 0;top: 7px;}
+.online_Book a {display: block;background: #ac0003;color: #FFF;padding: 10px 15px;border-radius: 4px; font-weight:500;}
+.online_Book a:hover {background: #ffd443;color: #000;}
+.gajapatilogo {text-align: center;margin: 20px 0 20px;}
+.welcome-footer{ margin:117px 0 0 0; padding:0 0 26px 0;}
+.welcome-footer p {text-align: center !important;color: #2e5690; font-size: 14px !important;}
+.slokaBlock {height: 100%;overflow: hidden;margin: 0 0 35px 0;}
+.slokaBlock img {float: left;}
+.slokaBlock p.solka {margin: 50px 0 0 0;}
+.cm-leter {position: relative; text-align:center; margin:0 35px;}
+.cm-leter img{ width:100%;}
+.cm-photo {position: absolute;left: 110px; top: 25%; z-index: 9999;}
+.welcome_inner.cm-cont {padding: 62px 0 0 0; min-height:780px;}
+#theme-stylesize {display: none;}
+.white-bg {background: #FFF;}
+.is-link-container {display: none !important;}
+#theme-style {border: 0 none;}
+.welcome-pic {margin: 20px auto 40px;text-align: center;}
+.welcome-pic img {width: 100%;}
+#hide-show-con{color:blue;}
+#show-hide-con{color:blue;}
+.lastst_inner.carona {background: rgb(238,174,202); background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+height: 100%;padding: 20px;border-radius: 4px;border: 2px solid #19ab01;margin-bottom: 20px;}
+.lastst_inner.carona h3 {background: transparent; padding:0; margin:0; text-transform:inherit; }
+.lastst_inner.carona.all h3 {font-size: 26px;line-height: 40px;}
+.Notifications tr:nth-child(3), .Notifications tr:nth-child(4), .Notifications tr:nth-child(5) {
+  display: none;
+}
+
+.codir {background: #f7100a; color: #FFF; border-radius: 4px; border: 2px dashed #fff; padding: 5px;}
+.codir a {color: #FFF !important;font-size: 30px;font-weight: 600;letter-spacing: 1px;}
+.security_button {background: #a02475; color: #FFF; border-radius: 4px; padding: 5px;}
+.security_button a {color: #FFF !important;font-size: 24px;font-weight: 600;}
+
+.time-table {background: ##ffffff9e;padding: 20px;border-radius: 0 0 10px 10px;box-shadow: 0 1px 6px rgba(0, 0, 0, 0.15);}
+.time-table h3 {font-size: 24px;color: #000;text-transform: capitalize;font-weight: 700;margin: 0 0 10px 0;}
+.time-table h4 {font-size: 18px; font-weight: 400; margin: 0 0 10px 0;}
+.time-table ul{}
+.time-table ul li{ color:#000; font-size:14px;}
+
+/*--------- Rathayatra 2022 --------*/
+.wpexperts-page .panel-default > .panel-heading {color: #333333;background-color: #fff;border-color: #ddd;}
+.wpexperts-page .panel-heading .panel-title {font-size: 1.4em;font-weight: 600;color: #000;}
+.wpexperts-page div.panel-heading .panel-title a i.glyphicon {position: absolute;right: 0px;top: 6px;}
+.wpexperts-page div.panel-heading .panel-title a {position: relative;width: 100%;display: inline-block;}
+.wpexperts-page #accordion.panel-group .panel {box-shadow: 0px 2px 4px #bababa;margin-bottom: 24px;}
+.time-table .inner-check li a {color: #d63c00 !important;text-decoration: underline;}
+.time-table p a {color: #d63c00 !important;text-decoration: underline;}
+.time-table .inner-check {padding-left: 30px;}
+.time-table .panel-body {height: 100%;overflow: hidden;}
+.all-images-5642.image_gallery_div {width: 100%;overflow: hidden;}
+.time-table .item-title {display: none;}
